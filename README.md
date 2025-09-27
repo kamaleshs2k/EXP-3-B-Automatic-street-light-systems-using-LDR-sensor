@@ -11,6 +11,10 @@
 	Photoresistor
   
 ## Circuit Diagram:
+<img width="1918" height="969" alt="image" src="https://github.com/user-attachments/assets/8cfcd758-b84a-45bd-b998-e8a2707108a4" />
+
+## Schematic View:
+<img width="983" height="763" alt="image" src="https://github.com/user-attachments/assets/8948ef61-ac4c-4f66-8b82-40f39220672e" />
 
 
 ## Theory :
@@ -65,11 +69,37 @@ o	The middle point (between LDR and resistor) connects to the Arduino analog inp
 •	Save the Circuit: Click "Save" to keep your circuit design and code for future use.
 
 ## Code:
+```c++
+const int ldrPin = A5;
+const int ledPin = 13;
+int ldrValue = 0;
 
+void setup() {
+  pinMode(ledPin, OUTPUT);
+  Serial.begin(9600);
+}
+
+void loop() {
+  ldrValue = analogRead(ldrPin);
+  if (ldrValue > 750) {
+    digitalWrite(ledPin, HIGH);
+  } else {
+    digitalWrite(ledPin, LOW);
+  }
+  Serial.println(ldrValue);
+  delay(1000);
+}
+
+```
 
 
 ## Output:
  
 
+https://github.com/user-attachments/assets/0bc7785d-7f12-4694-898a-063fe85da111
+
+
+
 
 ## Result:
+Thus, the LED was successfully controlled based on light intensity using the LDR.
