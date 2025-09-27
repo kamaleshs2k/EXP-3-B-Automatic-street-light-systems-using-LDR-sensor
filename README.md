@@ -1,7 +1,7 @@
 # EXP-3-B-Automatic-street-light-systems-using-LDR-sensor
 
 ## Aim: 
-
+To make Automatic street light systems using LDR sensor
 ## Hardware / Software Tools required:
 
 	PC/ Laptop with Internet connection
